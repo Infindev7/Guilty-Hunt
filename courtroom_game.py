@@ -526,6 +526,9 @@ selected_evidence_image = None
 # Global variable to store the scroll offset for evidence
 evidence_scroll_offset = 0
 
+# Global flag to enable or disable evidence images
+ENABLE_EVIDENCE_IMAGES = False
+
 # Draw the evidence (buttons)
 def draw_evidence(case):
     global selected_evidence_detail, evidence_scroll_offset, selected_evidence_image
@@ -543,7 +546,11 @@ def draw_evidence(case):
         # Check if the evidence is clicked
         if pygame.mouse.get_pressed()[0] and evidence_rect.collidepoint(pygame.mouse.get_pos()):
             selected_evidence_detail = evidence["detail"]
-            selected_evidence_image = pygame.image.load(f"Images/{evidence['desc']}.png")  # Load the image dynamically
+            if ENABLE_EVIDENCE_IMAGES:  # Only load the image if the feature is enabled
+                try:
+                    selected_evidence_image = pygame.image.load(f"Images/{evidence['desc']}.png")  # Load the image dynamically
+                except FileNotFoundError:
+                    selected_evidence_image = None  # Handle missing image gracefully
 
     # Calculate the height of the plaintiff's evidence section
     plaintiff_section_height = len(case["plaintiff_evidence"]) * 30
@@ -561,7 +568,11 @@ def draw_evidence(case):
         # Check if the evidence is clicked
         if pygame.mouse.get_pressed()[0] and evidence_rect.collidepoint(pygame.mouse.get_pos()):
             selected_evidence_detail = evidence["detail"]
-            selected_evidence_image = pygame.image.load(f"Images/{evidence['desc']}.png")  # Load the image dynamically
+            if ENABLE_EVIDENCE_IMAGES:  # Only load the image if the feature is enabled
+                try:
+                    selected_evidence_image = pygame.image.load(f"Images/{evidence['desc']}.png")  # Load the image dynamically
+                except FileNotFoundError:
+                    selected_evidence_image = None  # Handle missing image gracefully
 
     # Calculate the height of the defendant's evidence section
     defendant_section_height = len(case["defendant_evidence"]) * 30
@@ -580,9 +591,9 @@ def draw_evidence(case):
         )
 
         # Display the evidence image below the detail
-        if selected_evidence_image:
+        if ENABLE_EVIDENCE_IMAGES and selected_evidence_image:  # Only display the image if the feature is enabled
             image_x = 800 - 256 // 2  # Center the image with the evidence detail
-            image_y = detail_height  # Position 100px below the last line of the evidence detail
+            image_y = detail_height + 100  # Position 100px below the last line of the evidence detail
             screen.blit(selected_evidence_image, (image_x, image_y))
 
     # Draw instruction text below the evidence details

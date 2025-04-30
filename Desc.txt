@@ -1,10 +1,14 @@
-- Broken watch	:	Found at the scene, stopped at 10:15 PM, matching estimated time of death.
+- Broken watch	:	Defendant claims the watch's timing is a coincidence and not definitive proof.
 
 - Witness report	:	Neighbors reported an argument between the victim and Daniel shortly before the incident.
 
 - No forced entry	:	Door was intact and locked from inside, suggesting the victim let someone in.
 
-- CCTV footage	:	Footage near the apartment cuts off at exactly 10:00 PM.
+- CCTV footage	:	Footage shows Renner in another wing at the time of incident.
+
+- No fingerprints	:	No fingerprints on the murder weapon, a heavy statuette.
+
+- Alibi witness	:	A man from a nearby food truck claims Daniel bought coffee from him at 10:20 PM.
 
 - Footage	:	Security footage shows Marla entering the store at 3 PM, shortly before the theft.
 
@@ -12,17 +16,33 @@
 
 - Necklace found	:	The stolen necklace was discovered in her bag during a police search.
 
+- No tools	:	Marla carried no tools that could be used to open the locked display case.
+
+- Clean record	:	Marla has no history of theft or criminal behavior.
+
 - Unlocked door	:	Anton’s studio door was unlocked — unusual for him late at night.
 
 - Missing sheet	:	Only the handwritten composition was taken, while valuables were untouched.
 
 - Manager’s presence	:	Eliot's office access log shows activity at 8:15 PM — close to the time of the attack.
 
+- Lesson time	:	Clara’s lesson ended at 8 PM, verified by building logs.
+
+- No motive	:	Clara had no known disputes with Anton and was set to perform his work.
+
+- Manager’s debt	:	Eliot was in severe financial trouble and had motive to sell the composition illicitly.
+
 - Accelerant traces	:	Found near Julian’s desk, not in any other section.
 
 - Exit badge	:	Julian’s card logged exit at 9:45 PM, same time fire started.
 
 - Financial motive	:	Julian had applied for a private insurance policy on rare documents the week before.
+
+- Dana’s schedule	:	Dana had a recorded library session from 5 to 8 PM.
+
+- Flickering lights	:	Confirmed by multiple student complaints logged before 9 PM.
+
+- No direct witness	:	No one saw Julian at the archives post 8 PM.
 
 - Tainted glass	:	The only glass laced with toxin was the one Vale drank from.
 
@@ -32,6 +52,12 @@
 
 - Threat email	:	Traced to a burner phone bought with cash near Francis’ apartment.
 
+- Live feed proof	:	Camera shows Francis at transcript console during key moments.
+
+- No poison found	:	No toxin on Francis or his workspace.
+
+- Grimmer’s motive	:	Elaine had lost a merger deal due to Vale’s veto.
+
 - ID log	:	Renner’s card used at 9:42 PM — time of incident.
 
 - Deleted backup	:	Patent backup deleted at 9:47 PM.
@@ -40,11 +66,23 @@
 
 - Meeting log	:	Calendar had a meeting set between Renner and Virelli.
 
+- Alarm override	:	Triggered from Elena’s station using her credentials.
+
+- Keycard report	:	Renner had reported a missing card; both remained active.
+
+- Chemical analysis	:	Spill pattern consistent with unstable lab condition, not sabotage.
+
 - Shell links	:	Fund transfers went to companies owned by political allies of Minister Mehta.
 
 - Dead contractors	:	Receipts were signed by contractors who had been deceased for over two years.
 
 - Missing developments	:	Physical inspections revealed no progress on projects supposedly completed.
+
+- Audit bypass	:	Minister Mehta’s office was not formally notified before the audit began, raising legal concerns.
+
+- Legal tenders	:	Documentation shows that the selected companies fulfilled the tender requirements on paper.
+
+- Call for audit	:	The minister requested a forensic audit, indicating willingness for transparency.
 
 - USB file log	:	A large encrypted file was copied to an external drive from Aarav’s terminal during an overnight shift.
 
@@ -56,6 +94,16 @@
 
 - Access level	:	Aarav was one of five employees with unrestricted access to the full algorithm architecture.
 
+- CCTV failure	:	Security footage from the night in question is missing due to a camera outage on Aarav’s office floor.
+
+- Spoofed IP risk	:	Previous internal reports confirmed Aarav’s router had been targeted in past IP spoofing incidents.
+
+- Resignation notice	:	Aarav submitted his resignation two weeks prior to the breach, citing burnout, not financial gain.
+
+- Security warning report	:	Aarav had reported system vulnerabilities a month earlier that went ignored by the IT team.
+
+- Terminal access risk	:	Aarav’s terminal remained unlocked during lunch hours, and no biometric validation was used.
+
 - Internal access	:	Mikhail had clearance to access the most sensitive vault blueprints and schedules.
 
 - IP trace	:	Encrypted leak message was sent using the hotel room IP where Mikhail was staying.
@@ -66,6 +114,16 @@
 
 - Garage footage	:	Security camera shows Mikhail meeting a hooded figure hours before the breach message was sent.
 
+- Unsecured Wi-Fi	:	Cybersecurity report confirms the hotel’s Wi-Fi was vulnerable to spoofing and packet interception.
+
+- Audit protocol	:	Bank’s contract required Mikhail to store decrypted layouts for compliance reporting.
+
+- Family emergency call	:	Mobile provider logs show calls made to a hospital in Moscow the morning before his departure.
+
+- Translator alibi	:	Layla Chen confirmed meeting Mikhail in the garage to deliver notarized documents.
+
+- Server vulnerabilities	:	Bank’s internal audit flagged multiple admin accounts with shared passwords.
+
 - Deepfake artifacts	:	Forensic AI tools identified anomalies in the facial structure and frame transitions of Samira’s verification video.
 
 - Crypto wallet link	:	The insurance funds were deposited to a wallet tied to an AI avatar site previously accessed by Samira.
@@ -75,4 +133,14 @@
 - Missing 72 hours	:	Samira gave conflicting accounts about her location following the fire and could not produce travel records.
 
 - AI tool search logs	:	Browser history showed multiple visits to forums discussing bypassing identity checks using synthetic media.
+
+- Legitimate relationship	:	Multiple neighbors and work colleagues confirmed that Samira and Dr. Tanaka cohabited for years.
+
+- Official verification used	:	Samira used the standard insurer portal and submitted verification without any reported glitches.
+
+- Will documents	:	Signed legal documents list Samira as a primary beneficiary in Dr. Tanaka’s estate.
+
+- Mental breakdown	:	Psychological evaluation supports Samira’s claim of dissociation and trauma after the fire.
+
+- Shared device	:	The searches about AI spoofs were made on a shared laptop that Koen also used in his research.
 

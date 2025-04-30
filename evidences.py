@@ -404,7 +404,7 @@ cases = [
 desc_list = {}
 for i in cases:
     for key,value in i.items():
-        if key == 'plaintiff_evidence':
+        if key == 'plaintiff_evidence' or key == 'defendant_evidence':
             for evidence in value:
                 desc_list[evidence['desc']] = evidence['detail']
 
