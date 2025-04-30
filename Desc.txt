@@ -1,0 +1,78 @@
+- Broken watch	:	Found at the scene, stopped at 10:15 PM, matching estimated time of death.
+
+- Witness report	:	Neighbors reported an argument between the victim and Daniel shortly before the incident.
+
+- No forced entry	:	Door was intact and locked from inside, suggesting the victim let someone in.
+
+- CCTV footage	:	Footage near the apartment cuts off at exactly 10:00 PM.
+
+- Footage	:	Security footage shows Marla entering the store at 3 PM, shortly before the theft.
+
+- Fingerprints	:	Marla's fingerprints found on the display case where the necklace was kept.
+
+- Necklace found	:	The stolen necklace was discovered in her bag during a police search.
+
+- Unlocked door	:	Anton’s studio door was unlocked — unusual for him late at night.
+
+- Missing sheet	:	Only the handwritten composition was taken, while valuables were untouched.
+
+- Manager’s presence	:	Eliot's office access log shows activity at 8:15 PM — close to the time of the attack.
+
+- Accelerant traces	:	Found near Julian’s desk, not in any other section.
+
+- Exit badge	:	Julian’s card logged exit at 9:45 PM, same time fire started.
+
+- Financial motive	:	Julian had applied for a private insurance policy on rare documents the week before.
+
+- Tainted glass	:	The only glass laced with toxin was the one Vale drank from.
+
+- Camera blind spot	:	Francis briefly moved out of frame before handing the glass.
+
+- Login attempt	:	Francis tried accessing Vale's private vault 2 days earlier.
+
+- Threat email	:	Traced to a burner phone bought with cash near Francis’ apartment.
+
+- ID log	:	Renner’s card used at 9:42 PM — time of incident.
+
+- Deleted backup	:	Patent backup deleted at 9:47 PM.
+
+- Fingerprint	:	Renner’s partial print found on inner door panel.
+
+- Meeting log	:	Calendar had a meeting set between Renner and Virelli.
+
+- Shell links	:	Fund transfers went to companies owned by political allies of Minister Mehta.
+
+- Dead contractors	:	Receipts were signed by contractors who had been deceased for over two years.
+
+- Missing developments	:	Physical inspections revealed no progress on projects supposedly completed.
+
+- USB file log	:	A large encrypted file was copied to an external drive from Aarav’s terminal during an overnight shift.
+
+- Unsecured email	:	A mail containing encrypted content was sent to a server linked to a rival firm.
+
+- Router match	:	The sending IP matches Aarav's home router used for remote login the night before the breach.
+
+- Motive conflict	:	Internal HR reports show repeated clashes between Aarav and senior managers over salary disputes.
+
+- Access level	:	Aarav was one of five employees with unrestricted access to the full algorithm architecture.
+
+- Internal access	:	Mikhail had clearance to access the most sensitive vault blueprints and schedules.
+
+- IP trace	:	Encrypted leak message was sent using the hotel room IP where Mikhail was staying.
+
+- Decrypted files	:	A full vault layout file was found on Mikhail’s laptop.
+
+- Early departure	:	Mikhail checked out from the hotel two days early without notifying the bank.
+
+- Garage footage	:	Security camera shows Mikhail meeting a hooded figure hours before the breach message was sent.
+
+- Deepfake artifacts	:	Forensic AI tools identified anomalies in the facial structure and frame transitions of Samira’s verification video.
+
+- Crypto wallet link	:	The insurance funds were deposited to a wallet tied to an AI avatar site previously accessed by Samira.
+
+- Biometric key found	:	The backup biometric key from Dr. Tanaka’s lab, supposed to be destroyed in the fire, was recovered from Samira’s belongings.
+
+- Missing 72 hours	:	Samira gave conflicting accounts about her location following the fire and could not produce travel records.
+
+- AI tool search logs	:	Browser history showed multiple visits to forums discussing bypassing identity checks using synthetic media.
+
