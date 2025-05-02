@@ -4,8 +4,18 @@ import time
 # Initialize pygame
 pygame.init()
 
+pygame.mouse.set_visible(False)  # Hide the default mouse pointer
+
 # Initialize the mixer for music and SFX
 pygame.mixer.init()
+
+# Load the custom mouse pointer image
+try:
+    custom_mouse = pygame.image.load("Images/mouse.png")
+    custom_mouse = pygame.transform.scale(custom_mouse, (32, 32))  # Resize if needed
+except FileNotFoundError:
+    print("Custom mouse image not found. Using default mouse pointer.")
+    custom_mouse = None
 
 # Load music tracks
 title_music = "Audio/title_music.mp3"  # Replace with your title screen music file
@@ -700,6 +710,11 @@ def show_case_intro(case_number, case_title):
         screen.blit(title1, (x_center - title1.get_width() // 2, 250))
         screen.blit(title2, (x_center - title2.get_width() // 2, 300))
 
+        # Draw the custom mouse pointer
+        if custom_mouse:
+            mouse_x, mouse_y = pygame.mouse.get_pos()
+            screen.blit(custom_mouse, (mouse_x, mouse_y))
+
         pygame.display.flip()
         pygame.time.Clock().tick(60)
 
@@ -736,6 +751,11 @@ def show_truth(case):
         # Show "Press Anywhere to Continue" at the bottom
         continue_text = font_small.render("Press Anywhere to Continue", True, WHITE)
         screen.blit(continue_text, (screen.get_width() // 2 - continue_text.get_width() // 2, 600))  # Position near the bottom
+
+        # Draw the custom mouse pointer
+        if custom_mouse:
+            mouse_x, mouse_y = pygame.mouse.get_pos()
+            screen.blit(custom_mouse, (mouse_x, mouse_y))
 
         pygame.display.flip()
 
@@ -840,6 +860,11 @@ def show_title_screen():
         sfx_label = font_small.render("SFX Volume", True, WHITE)
         screen.blit(music_label, (music_slider_rect.x - 150, music_slider_rect.y))
         screen.blit(sfx_label, (sfx_slider_rect.x - 150, sfx_slider_rect.y))
+
+        # Draw the custom mouse pointer
+        if custom_mouse:
+            mouse_x, mouse_y = pygame.mouse.get_pos()
+            screen.blit(custom_mouse, (mouse_x, mouse_y))
 
         pygame.display.flip()
 
@@ -959,6 +984,11 @@ def game_loop():
                 # Prevent resetting result_text on extra clicks after verdict
                 elif result_text and case_finished_time == 0:
                     case_finished_time = time.time()  # Start transition to next case once the verdict is decided
+
+        # Draw the custom mouse pointer
+        if custom_mouse:
+            mouse_x, mouse_y = pygame.mouse.get_pos()
+            screen.blit(custom_mouse, (mouse_x, mouse_y))
 
         pygame.display.flip()
 
