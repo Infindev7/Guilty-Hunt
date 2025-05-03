@@ -730,7 +730,7 @@ def draw_skip_button():
 
 
 def show_truth(case):
-    play_music(truth_music, loop=False)  # Play truth music once
+    play_music(truth_music, loop=True)  # Play truth music once
     while True:
         screen.fill(BLACK)
 
@@ -807,7 +807,7 @@ def draw_progress_bar():
 
 def show_title_screen():
     # Play title screen music
-    play_music(title_music)
+    play_music(title_music, loop=True)
     pygame.mixer.music.set_volume(0.5)  # Ensure volume is set
 
     # Load the title image
@@ -906,7 +906,7 @@ def game_loop():
     show_skip_button = True  # Flag to control the visibility of the Skip button
 
     # Play dialogue music for the first case
-    play_music(dialogue_music)
+    play_music(dialogue_music, loop=True)
 
     # Check if we need to show the intro (fade transition) at the start of the game
     if case_index == 0 and case_finished_time == 0:
@@ -1025,19 +1025,122 @@ def game_loop():
 
 
 def show_thank_you_message():
-    play_music(thank_you_music, loop=False)  # Play thank-you music once
+    play_music(thank_you_music, loop=False)
     # Display "Thank You For Judging" and the final moral meter score
     end_message = font.render("Thank You For Judging", True, WHITE)
     moral_message = font_title.render(f"Final Moral Score: {moral_meter:.2f}", True, WHITE)
     start_time = time.time()
-    
-    while time.time() - start_time < 33:  # Show message for 33 seconds
+
+    # Show the message for 6 seconds
+    while time.time() - start_time < 6:
         screen.fill(BLACK)
         screen.blit(end_message, (screen.get_width() // 2 - end_message.get_width() // 2, screen.get_height() // 2 - 50))
         screen.blit(moral_message, (screen.get_width() // 2 - moral_message.get_width() // 2, screen.get_height() // 2 + 50))
         pygame.display.flip()
-        pygame.time.Clock().tick(60)  # Keep the game running at 60 FPS
-    stop_music()  # Stop thank-you music
+        pygame.time.Clock().tick(60)
+
+    # Fade out the message
+    for alpha in range(255, -1, -5):  # Gradually reduce alpha
+        fade_surface = pygame.Surface(screen.get_size())
+        fade_surface.fill(BLACK)
+        fade_surface.set_alpha(alpha)
+        screen.blit(fade_surface, (0, 0))
+        pygame.display.flip()
+        pygame.time.Clock().tick(60)
+
+    # Scroll the credits
+    credits_text = """
+    Music by
+    LFC Records from Pixabay
+    Shakib Hasan from Pixabay
+    Dubush Miaw from Pixabay
+    Maksym Dudchyk from Pixabay
+
+    SFX by
+    Vlad Krotov from Pixabay
+    Lesiakower from Pixabay
+
+    Game Powered By
+    Python using PyGame
+
+    Made By
+    Infindev
+
+    Fireside Jam 2025
+    """
+    scroll_credits(credits_text, font_small, screen, scroll_speed=1)
+
+    # A Sweet Final Message At the End
+    show_final_message()
+
+def scroll_credits(credits_text, font, screen, scroll_speed=1):
+    # Split the credits text into lines
+    lines = credits_text.split("\n")
+    rendered_lines = [font.render(line, True, WHITE) for line in lines]
+
+    # Calculate the starting Y position (off-screen at the bottom)
+    start_y = screen.get_height()
+
+    # Calculate the total height of the credits
+    total_height = sum(line.get_height() + 10 for line in rendered_lines)
+
+    # Scroll the credits
+    running = True
+    clock = pygame.time.Clock()
+    while running:
+        screen.fill(BLACK)
+
+        # Draw each line of the credits
+        y = start_y
+        for line in rendered_lines:
+            x = (screen.get_width() - line.get_width()) // 2  # Center horizontally
+            screen.blit(line, (x, y))
+            y += line.get_height() + 10
+
+        # Update the starting Y position
+        start_y -= scroll_speed
+
+        # Stop scrolling when the credits are off-screen
+        if start_y + total_height < 0:
+            running = False
+
+        pygame.display.flip()
+        clock.tick(60)  # Limit to 60 FPS
+
+
+def show_final_message():
+    message = "Thank You For Playing"
+    fade_duration = 1.0  # Duration for fade-in and fade-out (in seconds)
+    hold_duration = 3.0  # Duration to hold the message at full opacity (in seconds)
+    total_duration = fade_duration * 2 + hold_duration
+    start_time = time.time()
+
+    while True:
+        elapsed = time.time() - start_time
+        if elapsed > total_duration:
+            break
+
+        screen.fill(BLACK)
+
+        # Compute alpha for fade-in, hold, and fade-out
+        if elapsed < fade_duration:
+            alpha = int(255 * (elapsed / fade_duration))  # Fade in
+        elif elapsed < fade_duration + hold_duration:
+            alpha = 255  # Hold full opacity
+        else:
+            alpha = int(255 * (1 - (elapsed - fade_duration - hold_duration) / fade_duration))  # Fade out
+
+        # Render the message
+        message_surface = font_title.render(message, True, WHITE)
+        message_surface.set_alpha(alpha)
+
+        # Center the message on the screen
+        x_center = (screen.get_width() - message_surface.get_width()) // 2
+        y_center = (screen.get_height() - message_surface.get_height()) // 2
+        screen.blit(message_surface, (x_center, y_center))
+
+        pygame.display.flip()
+        pygame.time.Clock().tick(60)  # Limit to 60 FPS
 
 
 # Show the title screen

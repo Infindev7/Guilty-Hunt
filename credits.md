@@ -7,3 +7,11 @@
 # SFX by
 ## Vlad Krotov from Pixabay
 ## Lesiakower from Pixabay
+
+# Game Powered By
+## Python using PyGame
+
+# Made By
+## Infindev
+
+# Fireside Jam 2025
