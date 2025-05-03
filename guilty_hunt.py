@@ -1,8 +1,20 @@
 import pygame
 import time
+import sys
 
 # Initialize pygame
 pygame.init()
+
+# Load the custom mouse pointer image
+try:
+    custom_mouse = pygame.image.load("Images/mouse.png")
+    custom_mouse = pygame.transform.scale(custom_mouse, (32, 32))  # Resize if needed
+
+    # Set the Pygame window icon
+    pygame.display.set_icon(custom_mouse)
+except FileNotFoundError:
+    print("Custom mouse image not found. Using default mouse pointer.")
+    custom_mouse = None
 
 pygame.mouse.set_visible(False)  # Hide the default mouse pointer
 
@@ -763,7 +775,7 @@ def show_truth(case):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
-                exit()
+                sys.exit()
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 stop_music()  # Stop truth music
                 return  # Exit the function when the player clicks
@@ -873,7 +885,7 @@ def show_title_screen():
             if event.type == pygame.QUIT:
                 pygame.mixer.Sound.play(button_click_sfx)  # Play button click SFX
                 pygame.quit()
-                exit()
+                sys.exit()
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 pygame.mixer.Sound.play(button_click_sfx)  # Play button click SFX
                 if start_button.collidepoint(event.pos):
@@ -881,7 +893,7 @@ def show_title_screen():
                     return  # Start the game
                 elif quit_button.collidepoint(event.pos):
                     pygame.quit()
-                    exit()
+                    sys.exit()
                 elif music_slider_rect.collidepoint(event.pos):
                     music_volume = (event.pos[0] - music_slider_rect.x) / music_slider_rect.width
                     pygame.mixer.music.set_volume(music_volume)
